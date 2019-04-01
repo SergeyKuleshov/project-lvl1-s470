@@ -1,0 +1,10 @@
+{
+    "name": "sergei/brain-games-project",
+    "authors": [
+        {
+            "name": "Sergei Kuleshov",
+            "email": "kilinserg89@mail.ru"
+        }
+    ],
+    "require": {}
+}
