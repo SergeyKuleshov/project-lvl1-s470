@@ -1,5 +1,10 @@
 {
     "name": "sergei/brain-games-project",
+    "description": "Brain-games",
+    "keywords": ["php", "composer"],
+    "bin": [
+        "./brain-games"
+    ],
     "authors": [
         {
             "name": "Sergei Kuleshov",
