@@ -1,6 +1,7 @@
 {
     "name": "sergei/brain-games-project",
     "description": "Brain-games",
+    "type": "library",
     "keywords": ["php", "composer"],
     "bin": [
         "bin/brain-games"
