@@ -3,6 +3,8 @@
 Asciinema "Welcome to the Brain Games"
 [![asciicast](https://asciinema.org/a/sl3zpVFeOPfG97SbBjxFt9AOL.svg)](https://asciinema.org/a/sl3zpVFeOPfG97SbBjxFt9AOL)
 
+Asciinema "Ask name"
+[![asciicast](https://asciinema.org/a/2jTYs4q4f5EHetSwR8ELDJAew.svg)](https://asciinema.org/a/2jTYs4q4f5EHetSwR8ELDJAew)
 
 
 Code Climate:
