@@ -11,7 +11,7 @@ function run()
     line('Answer "yes" if number even otherwise answer "no".');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    
+
     $numbers = [
         'firstNumber' => 15,
         'secondNumber' => 6,
@@ -24,7 +24,7 @@ function run()
         $answer = prompt("Even?");
         line("Your answer " . $answer);
 
-        if ( ($num % 2 == 0 && $answer == 'yes') || ($num % 2 != 0 && $answer == 'no') ) {
+        if (($num % 2 == 0 && $answer == 'yes') || ($num % 2 != 0 && $answer == 'no')) {
             line("Correct");
             $count++;
         }
