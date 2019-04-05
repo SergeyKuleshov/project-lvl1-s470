@@ -8,31 +8,25 @@ use function \cli\prompt;
 function run()
 {
     line('Welcome to the Brain Game!');
-    line('Answer "yes" if number even otherwise answer "no".');
+    line('Answer "yes" if number even otherwise answer "no".' . PHP_EOL);
     $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-
-    $numbers = [
-        'firstNumber' => 15,
-        'secondNumber' => 6,
-        'thirdNumber' => 7
-    ];
+    line("Hello, %s!\n", $name);
 
     $count = 0;
-    foreach ($numbers as $num) {
+    for ($i = 0; $i < 3; $i++) {
+        $num = rand(1, 100);
         line("Question: " . $num);
-        $answer = prompt("Even?");
-        line("Your answer " . $answer);
+        $answer = prompt("Your answer");
 
         if (($num % 2 == 0 && $answer == 'yes') || ($num % 2 != 0 && $answer == 'no')) {
             line("Correct");
             $count++;
+        } else {
+            line("Incorrect answer");
         }
     }
 
     if ($count == 3) {
         line("Congratulations," . $name);
     }
-
-    line($count);
 }
