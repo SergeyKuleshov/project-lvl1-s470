@@ -1,4 +1,6 @@
 # project-lvl1-s470
+Asciinema game "Brain-calc"
+[![asciicast](https://asciinema.org/a/vkzQwMdve80u0tbZz0b2j2tYb.svg)](https://asciinema.org/a/vkzQwMdve80u0tbZz0b2j2tYb)
 
 Asciinema game "Brain-Even":
 [![asciicast](https://asciinema.org/a/FRRvZKJaJVTjqkMY65oUyaHiF.svg)](https://asciinema.org/a/FRRvZKJaJVTjqkMY65oUyaHiF)
