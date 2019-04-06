@@ -44,4 +44,3 @@ function run()
         line("Congratulations," . $name);
     }
 }
-
