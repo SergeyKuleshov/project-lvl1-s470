@@ -1,7 +1,7 @@
 # project-lvl1-s470
 
 Asciinema game "Brain-Even":
-[![asciicast](https://asciinema.org/a/LHeWV4aVI0tZ3qFLCi6wArhwg.svg)](https://asciinema.org/a/LHeWV4aVI0tZ3qFLCi6wArhwg)
+[![asciicast](https://asciinema.org/a/FRRvZKJaJVTjqkMY65oUyaHiF.svg)](https://asciinema.org/a/FRRvZKJaJVTjqkMY65oUyaHiF)
 
 Travis CI:
 [![Build Status](https://travis-ci.org/SergeyKuleshov/project-lvl1-s470.svg?branch=master)](https://travis-ci.org/SergeyKuleshov/project-lvl1-s470)
