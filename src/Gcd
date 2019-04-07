@@ -1,0 +1,46 @@
+<?php
+
+namespace BrainGamesProject\Gcd;
+
+use function \cli\line;
+use function \cli\prompt;
+
+function run()
+{
+    line('Welcome to the Brain Game!');
+    line('Find the greatest common divisor of given numbers.' . PHP_EOL);
+    $name = prompt('May I have your name?');
+    line("Hello, %s!\n", $name);
+
+    $count = 0;
+    for ($i = 0; $i < 3; $i++) {
+        $firstNumber = rand(1, 100);
+        $secondNumber = rand(1, 100);
+        line("Question: " . $firstNumber . $secondNumber);
+        $answer = prompt("Your answer");
+
+        if ($firstNumber > $secondNumber) {
+            $greatNumber = $firstNumber;
+            $lowerNumber = $secondNumber;
+        } else {
+            $greatNumber = $secondNumber;
+            $lowerNumber = $firstNumber;
+        }
+
+        $potentialGcd = $lowerNumber;
+        while (!$greatNumber % $potentialGcd == 0 && !$lowerNumber % $potentialGcd == 0) {
+            $potentialGcd--;
+        }
+
+        if (($num % 2 == 0 && $answer == 'yes') || ($num % 2 != 0 && $answer == 'no')) {
+            line("Correct");
+            $count++;
+        } else {
+            line("Incorrect answer");
+        }
+    }
+
+    if ($count == 3) {
+        line("Congratulations," . $name);
+    }
+}
