@@ -7,6 +7,19 @@ use function \cli\prompt;
 
 function run()
 {
+
+    function isEven($number)
+    {
+        return $number % 2 == 0;
+    }
+
+    function check($number)
+    {
+        $result = isEven($number) ? 'yes' : 'no';
+        return($result);
+    }
+
+
     line('Welcome to the Brain Game!');
     line('Answer "yes" if number even otherwise answer "no".' . PHP_EOL);
     $name = prompt('May I have your name?');
@@ -18,7 +31,7 @@ function run()
         line("Question: " . $questionNumber);
         $answer = prompt("Your answer");
 
-        if (($questionNumber % 2 == 0 && $answer == 'yes') || ($questionNumber % 2 != 0 && $answer == 'no')) {
+        if (check($questionNumber) == $answer) {
             line("Correct");
         } else {
              return(line("Incorrect answer"));
