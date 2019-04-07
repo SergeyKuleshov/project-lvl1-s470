@@ -12,23 +12,12 @@ function run()
     $name = prompt('May I have your name?');
     line("Hello, %s!\n", $name);
 
-    $count = 0;
-    for ($i = 0; $i < 3; $i++) {
+    $numberOfGameRounds = 3;
+    for ($i = 0; $i < $numberOfGameRounds; $i++) {
         $firstOperand = rand(1, 10);
         $secondOperand = rand(1, 10);
         $mathOperation = ['plus', 'minus', 'multiplication'];
         $randomMathOperation = $mathOperation[array_rand($mathOperation)];
-
-       // if ($randomMathOperation == 'plus') {
-       //     line("Question: " . $firstOperand . ' + ' . $secondOperand);
-       //     $result = $firstOperand + $secondOperand;
-       // } elseif ($randomMathOperation == 'minus') {
-       //     line("Question: " . $firstOperand  . ' - ' . $secondOperand);
-       //     $result = $firstOperand - $secondOperand;
-       // } else {
-       //     line("Question: " . $firstOperand  . ' * ' .  $secondOperand);
-       //     $result = $firstOperand * $secondOperand;
-       // }
 
         switch ($randomMathOperation) {
             case 'plus':
@@ -49,14 +38,9 @@ function run()
 
         if ($answer == $result) {
             line("Correct");
-            $count++;
         } else {
-            line("'$answer'" . " is wrong answer ;(. Correct answer was " . "'$result'" . ". Let's try again, " . $name . "!");
-            break;
+            return(line("'$answer'" . " is wrong answer ;(. Correct answer was " . "'$result'" . ". Let's try again, " . $name . "!"));
         }
     }
-
-    if ($count == 3) {
-        line("Congratulations," . $name);
-    }
+    return(line("Congratulations, " . $name));
 }
