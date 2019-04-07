@@ -16,12 +16,14 @@ function run()
     for ($i = 0; $i < 3; $i++) {
         $firstOperand = rand(1, 10);
         $secondOperand = rand(1, 10);
-        $mathOperation = rand(1, 3);
+       // $mathOperation = rand(1, 3);
+        $mathOperation = ['plus', 'minus', 'multiplication'];
+        $randomMathOperation = $mathOperation[array_rand($mathOperation)];
 
-        if ($mathOperation == 1) {
+        if ($randomMathOperation == 'plus') {
             line("Question: " . $firstOperand . ' + ' . $secondOperand);
             $result = $firstOperand + $secondOperand;
-        } elseif ($mathOperation == 2) {
+        } elseif ($randomMathOperation == 'minus') {
             line("Question: " . $firstOperand  . ' - ' . $secondOperand);
             $result = $firstOperand - $secondOperand;
         } else {
