@@ -12,21 +12,17 @@ function run()
     $name = prompt('May I have your name?');
     line("Hello, %s!\n", $name);
 
-    $count = 0;
-    for ($i = 0; $i < 3; $i++) {
-        $num = rand(1, 100);
-        line("Question: " . $num);
+    $numberOfGameRounds = 3;
+    for ($i = 0; $i < $numberOfGameRounds; $i++) {
+        $questionNumber = rand(1, 100);
+        line("Question: " . $questionNumber);
         $answer = prompt("Your answer");
 
-        if (($num % 2 == 0 && $answer == 'yes') || ($num % 2 != 0 && $answer == 'no')) {
+        if (($questionNumber % 2 == 0 && $answer == 'yes') || ($questionNumber % 2 != 0 && $answer == 'no')) {
             line("Correct");
-            $count++;
         } else {
-            line("Incorrect answer");
+             return(line("Incorrect answer"));
         }
     }
-
-    if ($count == 3) {
-        line("Congratulations," . $name);
-    }
+    return(line("Congratulations," . $name));
 }
