@@ -16,19 +16,33 @@ function run()
     for ($i = 0; $i < 3; $i++) {
         $firstOperand = rand(1, 10);
         $secondOperand = rand(1, 10);
-       // $mathOperation = rand(1, 3);
         $mathOperation = ['plus', 'minus', 'multiplication'];
         $randomMathOperation = $mathOperation[array_rand($mathOperation)];
 
-        if ($randomMathOperation == 'plus') {
-            line("Question: " . $firstOperand . ' + ' . $secondOperand);
-            $result = $firstOperand + $secondOperand;
-        } elseif ($randomMathOperation == 'minus') {
-            line("Question: " . $firstOperand  . ' - ' . $secondOperand);
-            $result = $firstOperand - $secondOperand;
-        } else {
-            line("Question: " . $firstOperand  . ' * ' .  $secondOperand);
-            $result = $firstOperand * $secondOperand;
+       // if ($randomMathOperation == 'plus') {
+       //     line("Question: " . $firstOperand . ' + ' . $secondOperand);
+       //     $result = $firstOperand + $secondOperand;
+       // } elseif ($randomMathOperation == 'minus') {
+       //     line("Question: " . $firstOperand  . ' - ' . $secondOperand);
+       //     $result = $firstOperand - $secondOperand;
+       // } else {
+       //     line("Question: " . $firstOperand  . ' * ' .  $secondOperand);
+       //     $result = $firstOperand * $secondOperand;
+       // }
+
+        switch ($randomMathOperation) {
+            case 'plus':
+                line("Question: " . $firstOperand . ' + ' . $secondOperand);
+                $result = $firstOperand + $secondOperand;
+                break;
+            case 'minus':
+                line("Question: " . $firstOperand  . ' - ' . $secondOperand);
+                $result = $firstOperand - $secondOperand;
+                break;
+            case 'multiplication':
+                line("Question: " . $firstOperand  . ' * ' .  $secondOperand);
+                $result = $firstOperand * $secondOperand;
+                break;
         }
 
         $answer = prompt("Your answer");
